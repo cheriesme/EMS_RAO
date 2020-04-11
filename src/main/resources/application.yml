@@ -1,0 +1,19 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver  # MySql jdbc Driver
+    url: jdbc:mysql://127.0.0.1:3306/ems_table?useSSL=false&requireSSL=false&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password:
+  main:
+    allow-bean-definition-overriding: true
+  thymeleaf:
+    mode: HTML
+    encoding: utf-8
+    cache: false
+    messages:
+      basename: i18n/messages
+mybatis:
+  type-aliases-package: com.example.ems.Entity
+  mapper-locations: mappers/*.xml

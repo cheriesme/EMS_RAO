@@ -1,0 +1,26 @@
+.main_box{
+}
+.left_directory{
+
+    float: left;
+}
+.welcome_column{
+    height: 50px;
+    background-color: #2b2f3a;
+}
+.main_directory{
+    font-size: 14px;
+    background-color: #304156;
+}
+.right_content{
+   background-color: #a8a9ac;
+ }
+.menu-parent-node{
+    width: 200px;
+    height: 56px;
+    background-color: #ffffff;
+}
+.menu-parent-node:hover{
+    background-color: rgb(38,52,69);
+}
+

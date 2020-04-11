@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>Endless Admin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Bootstrap core CSS -->
+	<link  rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+
+	<!-- Font Awesome-->
+	<link rel="stylesheet"th:href="@{/css/font-awesome.min.css}">
+
+	<!-- Pace -->
+	<link  rel="stylesheet"th:href="@{/css/pace.css}">
+
+	<!-- Datatable -->
+	<link  rel="stylesheet"th:href="@{/css/jquery.dataTables_themeroller.css}">
+
+	<!-- Endless -->
+	<link  rel="stylesheet"th:href="@{/css/endless.min.css}">
+	<link  rel="stylesheet"th:href="@{/css/endless-skin.css}">
+
+
+
+
+</head>
+
+<body class="overflow-hidden">
+<!-- Overlay Div -->
+<div id="overlay" class="transparent"></div>
+
+<a href="" id="theme-setting-icon"><i class="fa fa-cog fa-lg"></i></a>
+<div th:replace="common/menu::themeseeting"></div>
+<div id="wrapper" class="preload">
+	<div id="top-nav" class="fixed skin-3">
+		<a href="#" class="brand">
+			<span>汇丰</span>
+		</a><!-- /brand -->
+		<button type="button" class="navbar-toggle pull-left" id="sidebarToggle">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<button type="button" class="navbar-toggle pull-left hide-menu" id="menuToggle">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<ul class="nav-notification clearfix">
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<i class="fa fa-envelope fa-lg"></i>
+					<span class="notification-label bounceIn animation-delay4">7</span>
+				</a>
+				<ul class="dropdown-menu message dropdown-1">
+					<li><a>You have 4 new unread messages</a></li>
+					<li>
+						<a class="clearfix" href="#">
+							<img src="img/user.jpg" alt="User Avatar">
+							<div class="detail">
+								<strong>[[${session.name}]]</strong>
+								<p class="no-margin">
+									Lorem ipsum dolor sit amet...
+								</p>
+								<small class="text-muted"><i class="fa fa-check text-success"></i> 27m ago</small>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="clearfix" href="#">
+							<img src="img/user2.jpg" alt="User Avatar">
+							<div class="detail">
+								<strong>Jane Doe</strong>
+								<p class="no-margin">
+									Lorem ipsum dolor sit amet...
+								</p>
+								<small class="text-muted"><i class="fa fa-check text-success"></i> 5hr ago</small>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="clearfix" href="#">
+							<img src="img/user.jpg" alt="User Avatar">
+							<div class="detail">
+								<strong>Bill Doe</strong>
+								<p class="no-margin">
+									Lorem ipsum dolor sit amet...
+								</p>
+								<small class="text-muted"><i class="fa fa-reply"></i> Yesterday</small>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="clearfix" href="#">
+							<img src="img/user2.jpg" alt="User Avatar">
+							<div class="detail">
+								<strong>Baby Doe</strong>
+								<p class="no-margin">
+									Lorem ipsum dolor sit amet...
+								</p>
+								<small class="text-muted"><i class="fa fa-reply"></i> 9 Feb 2013</small>
+							</div>
+						</a>
+					</li>
+					<li><a href="#">View all messages</a></li>
+				</ul>
+			</li>
+			<li class="dropdown hidden-xs">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-tasks fa-lg"></i>
+					<span class="notification-label bounceIn animation-delay5">4</span>
+				</a>
+				<ul class="dropdown-menu task dropdown-2">
+					<li><a href="#">You have 4 tasks to complete</a></li>
+					<li>
+						<a href="#">
+							<div class="clearfix">
+								<span class="pull-left">Bug Fixes</span>
+								<small class="pull-right text-muted">78%</small>
+							</div>
+							<div class="progress">
+								<div class="progress-bar" style="width:78%"></div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="clearfix">
+								<span class="pull-left">Software Updating</span>
+								<small class="pull-right text-muted">54%</small>
+							</div>
+							<div class="progress progress-striped">
+								<div class="progress-bar progress-bar-success" style="width:54%"></div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="clearfix">
+								<span class="pull-left">Database Migration</span>
+								<small class="pull-right text-muted">23%</small>
+							</div>
+							<div class="progress">
+								<div class="progress-bar progress-bar-warning" style="width:23%"></div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="clearfix">
+								<span class="pull-left">Unit Testing</span>
+								<small class="pull-right text-muted">92%</small>
+							</div>
+							<div class="progress progress-striped active">
+								<div class="progress-bar progress-bar-danger " style="width:92%"></div>
+							</div>
+						</a>
+					</li>
+					<li><a href="#">View all tasks</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<i class="fa fa-bell fa-lg"></i>
+					<span class="notification-label bounceIn animation-delay6">5</span>
+				</a>
+				<ul class="dropdown-menu notification dropdown-3">
+					<li><a href="#">You have 5 new notifications</a></li>
+					<li>
+						<a href="#">
+								<span class="notification-icon bg-warning">
+									<i class="fa fa-warning"></i>
+								</span>
+							<span class="m-left-xs">Server #2 not responding.</span>
+							<span class="time text-muted">Just now</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-plus"></i>
+								</span>
+							<span class="m-left-xs">New user registration.</span>
+							<span class="time text-muted">2m ago</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+								<span class="notification-icon bg-danger">
+									<i class="fa fa-bolt"></i>
+								</span>
+							<span class="m-left-xs">Application error.</span>
+							<span class="time text-muted">5m ago</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-usd"></i>
+								</span>
+							<span class="m-left-xs">2 items sold.</span>
+							<span class="time text-muted">1hr ago</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-plus"></i>
+								</span>
+							<span class="m-left-xs">New user registration.</span>
+							<span class="time text-muted">1hr ago</span>
+						</a>
+					</li>
+					<li><a href="#">View all notifications</a></li>
+				</ul>
+			</li>
+			<li class="profile dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<strong>[[${session.name}]]</strong>
+					<span><i class="fa fa-chevron-down"></i></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a class="clearfix" href="#">
+							<img src="img/user.jpg" alt="User Avatar">
+							<div class="detail">
+								<strong>[[${session.name}]]</strong>
+								<p class="grey">John_Doe@email.com</p>
+							</div>
+						</a>
+					</li>
+					<li><a tabindex="-1" href="profile.html" class="main-link"><i class="fa fa-edit fa-lg"></i> Edit profile</a></li>
+					<li><a tabindex="-1" href="gallery.html" class="main-link"><i class="fa fa-picture-o fa-lg"></i> Photo Gallery</a></li>
+					<li><a tabindex="-1" href="#" class="theme-setting"><i class="fa fa-cog fa-lg"></i> Setting</a></li>
+					<li class="divider"></li>
+					<li><a tabindex="-1" class="main-link logoutConfirm_open" href="#logoutConfirm"><i class="fa fa-lock fa-lg"></i> Log out</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div><!-- /top-nav-->
+	<aside class="fixed skin-3">
+		<div th:replace="common/menu::sidebaruinner"></div>
+	</aside>
+	<div id="main-container">
+		<div th:replace="common/menu::breadcrumb"></div>
+<!--		<div th:replace="common/menu::pagetitle"></div>-->
+		<div th:replace="common/menu::greycontainer"></div>
+		<div class="padding-md">
+			<div class="panel panel-default pull-left"style="width: 20%;height: 400px;">
+				<div class="panel-heading">
+					部门树
+				</div>
+				<div class="padding-sm pull-left" ></div>
+			</div>
+
+			<div class="panel panel-default table-responsive pull-right" id="create-div" style="width: 80%">
+				<div class="login-widget animation-delay1" >
+					<div class="panel-heading" id="cut-div">
+						部门信息  <span  class="label label-success" style="font-weight: bold;color: #000000;">and</span>
+						<a href="#" class="label label-success " style="font-size: 11px" id="create-a"><span style="font-weight: bold;color: #ffffff;">+</span>&nbsp;新增部门</a>
+						<div class="panel panel-default"  style="height: 60px;margin-top: 5px">
+							<form th:action="@{/dept/save.page}" method="post">
+								<div class="form-group"style="height: 80%;width: 200px;float: left;margin-left: 5px">
+									<lable>部门</lable>
+									<input type="text" name="name" placeholder="部门名称"class="form-control input-sm bounceIn animation-delay1" >
+								</div>
+								<div class="form-group"style="height: 40px;width: 200px;float: left;margin-left: 100px">
+									<lable>所属部门</lable>
+									<select name="parentId" class="form-control input-sm bounceIn animation-delay2" >
+										<option th:each="dept:${deptlist}"th:value="${dept.id}"th:text="${dept.name}">1</option>
+									</select>
+								</div>
+								<div class="form-group"style="height: 40px;width: 200px;float: left;margin-left: 100px">
+									<lable>备注</lable>
+									<input type="text" name="remark" class="form-control input-sm bounceIn animation-delay3">
+								</div>
+								<div class="form-group"style="height: 40px;width: 200px;float: left;margin-left: 100px">
+									<lable>排序</lable>
+									<input type="text" name="seq" class="form-control input-sm bounceIn animation-delay3">
+								</div>
+
+									<button class="btn btn-success btn-sm bounceIn animation-delay7 "style="margin-top: 18px;margin-left: 10px" type="submit">提交</button>
+									<button class="btn btn-success btn-sm bounceIn animation-delay7 " style="margin-top: 18px;margin-left: 10px"type="reset">重置</button>
+
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="padding-md clearfix" id="cut-div-1" >
+
+					<table class="table" id="dataTable">
+						<span class="label label-info pull-right" style="margin-top: 0px">共有[[${session.deptsize}]]个部门</span>
+						<thead>
+						<tr>
+							<th>No</th>
+							<th>部门</th>
+							<th>备注</th>
+							<th>operator</th>
+							<th>operate_time</th>
+							<th>operate_ip</th>
+							<th>操作</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr th:each="single:${deptlist}">
+							<td th:text="${single.id}"></td>
+							<td th:text="${single.name}"></td>
+							<td th:text="${single.remark}"></td>
+							<td th:text="${single.operator}"></td>
+							<td th:text="${single.operateTime}"></td>
+							<td th:text="${single.operateIp}"></td>
+							<td>
+								<a href="#"class="label label-success">编辑</a>
+								<button th:attr="Dle_url=@{/dept/delete.page/}+${single.id}" type="submit"class="label label-danger">删除</button>
+
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div><!-- /.padding-md -->
+			</div><!-- /panel -->
+			<form id="deletedept" method="post">
+				<input type="hidden" name="method" value="delete">
+			</form>
+		</div><!-- /.padding-md -->
+	</div><!-- /main-container -->
+</div><!-- /wrapper -->
+<a href="" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
+
+
+<!-- Jquery -->
+<script type="text/javascript" th:src="@{/js/jquery-1.10.2.min.js}"></script>
+
+<!-- Bootstrap -->
+<script type="text/javascript"th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+
+<!-- Datatable -->
+<script type="text/javascript"th:src="@{/js/jquery.dataTables.min.js}"></script>
+
+<!-- Modernizr -->
+<script type="text/javascript"th:src="@{/js/modernizr.min.js}"></script>
+
+<!-- Pace -->
+<script type="text/javascript"th:src="@{/js/pace.min.js}"></script>
+
+<!-- Popup Overlay -->
+<script type="text/javascript"th:src="@{/js/jquery.popupoverlay.min.js}"></script>
+
+<!-- Slimscroll -->
+<script type="text/javascript"th:src="@{/js/jquery.slimscroll.min.js}"></script>
+
+<!-- Cookie -->
+<script type="text/javascript"th:src="@{/js/jquery.cookie.min.js}"></script>
+
+<!-- Endless -->
+<script type="text/javascript"th:src="@{/js/endless/endless.js}"></script>
+
+
+<script>
+	$(function	()	{
+		$('#dataTable').dataTable( {
+			"bJQueryUI": true,
+			"sPaginationType": "full_numbers"
+		});
+
+		$('#chk-all').click(function()	{
+			if($(this).is(':checked'))	{
+				$('#responsiveTable').find('.chk-row').each(function()	{
+					$(this).prop('checked', true);
+					$(this).parent().parent().parent().addClass('selected');
+				});
+			}
+			else	{
+				$('#responsiveTable').find('.chk-row').each(function()	{
+					$(this).prop('checked' , false);
+					$(this).parent().parent().parent().removeClass('selected');
+				});
+			}
+		});
+	});
+	$(".label-danger").click(function () {
+
+		if(confirm("确定要删除吗？"))
+		{
+			$("#deletedept").attr("action", $(this).attr("Dle_url")).submit();
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	});
+	// $(function () {
+	// 	$("#create-a").click(function () {
+	// 		$("#cut-div").remove();
+	// 		$("#cut-div-1").remove();
+	// 		$("#create-div").append("<div class=\"text-center\">\n" +
+	// 				"\t\t\t<h2 class=\"fadeInUp animation-delay10\" style=\"font-weight:bold\">\n" +
+	// 				"\t\t\t\t<span class=\"text-success\">汇丰</span> <span style=\"color:#ccc; text-shadow:0 1px #fff\">添加部门</span>\n" +
+	// 				"\t\t\t</h2>\n" +
+	// 				"\t    </div>\n" +
+	// 				"\t\t<div class=\"login-widget animation-delay1\">\t\n" +
+	// 				"\t\t\t<div class=\"panel panel-default\">\n" +
+	// 				"\t\t\t\t\t<form class=\"form-login\" style=\"width;500px;margin-left: 30%;margin-right: 30%\"th:action=\"@{/index/register.json}\" method=\"post\">\n" +
+	// 				"\t\t\t\t\t\t<div class=\"form-group\">\n" +
+	// 				"\t\t\t\t\t\t\t<label>部门</label>\n" +
+	// 				"\t\t\t\t\t\t\t<input type=\"text\" name=\"name\" placeholder=\"部门名称\" class=\"form-control input-sm bounceIn animation-delay1\" >\n" +
+	// 				"\t\t\t\t\t\t</div><!-- /form-group -->\n" +
+	// 				"\t\t\t\t\t\t<div class=\"form-group\">\n" +
+	// 				"\t\t\t\t\t\t\t<label>所属部门</label>\n" +
+	// 				"\t\t\t\t\t\t\t<select name=\"parentId\" class=\"form-control input-sm bounceIn animation-delay2\">\n" +
+	// 				"\t\t\t\t\t\t\t\t<option th:each=\"dept:${deptlist}\" th:text=\"${dept.name}\" th:value=\"${dept.id}\">1</option>\n" +
+	// 				"\t\t\t\t\t\t\t</select></div>\n" +
+	// 				"\t\t\t\t\t\t<div class=\"form-group\">\n" +
+	// 				"\t\t\t\t\t\t\t<lable>备注</lable>\n" +
+	// 				"\t\t\t\t\t\t\t<input name=\"remark\" placeholder=\"请输入备注\" class=\"form-control input-sm bounceIn animation-delay3\">\n" +
+	// 				"\t\t\t\t\t\t</div>\n" +
+	// 				"\t\t\t\t\t\t<div class=\"form-group\">\n" +
+	// 				"\n" +
+	// 				"\t\t\t\t\t\t<div class=\"seperator\"></div>\n" +
+	// 				"\n" +
+	// 				"\n" +
+	// 				"\t\t\t\t\t\t<hr/>\n" +
+	// 				"\t\t\t\t\t\t<div class=\"form-group\">\n" +
+	// 				"\t\t\t\t\t\t\t<div class=\"controls text-right\">\n" +
+	// 				"\t\t\t\t\t\t\t\t<button class=\"btn btn-success btn-sm bounceIn animation-delay7 login-link\" id=\"tijiao\" type=\"submit\"><i class=\"fa fa-plus-circle\"></i> 提交</button>\n" +
+	// 				"\t\t\t\t\t\t\t</div>\n" +
+	// 				"\t\t\t\t\t\t</div><!-- /form-group -->\n" +
+	// 				"\t\t\t\t\t</form>\n" +
+	// 				"\t\t\t\t</div>\n" +
+	// 				"\t\t\t</div><!-- /panel -->\n" +
+	// 				"\t\t</div><!-- /login-widget -->\n");
+	// 	})
+	// })
+</script>
+
+</body>
+</html>

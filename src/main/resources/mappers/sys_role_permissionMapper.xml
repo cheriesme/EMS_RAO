@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ems.mapper.sys_role_permissionMapper">
+  <resultMap id="BaseResultMap" type="com.example.ems.Entity.sys_role_permission">
+    <constructor>
+      <idArg column="roleid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <idArg column="permissionid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="operator" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="operateip" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="operatetime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    roleid, permissionid, operator, operateip, operatetime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.example.ems.Entity.sys_role_permissionKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_role_permission
+    where roleid = #{roleid,jdbcType=INTEGER}
+      and permissionid = #{permissionid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.example.ems.Entity.sys_role_permissionKey">
+    delete from sys_role_permission
+    where roleid = #{roleid,jdbcType=INTEGER}
+      and permissionid = #{permissionid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.ems.Entity.sys_role_permission">
+    insert into sys_role_permission (roleid, permissionid, operator, 
+      operateip, operatetime)
+    values (#{roleid,jdbcType=INTEGER}, #{permissionid,jdbcType=INTEGER}, #{operator,jdbcType=VARCHAR}, 
+      #{operateip,jdbcType=VARCHAR}, #{operatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.ems.Entity.sys_role_permission">
+    insert into sys_role_permission
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roleid != null">
+        roleid,
+      </if>
+      <if test="permissionid != null">
+        permissionid,
+      </if>
+      <if test="operator != null">
+        operator,
+      </if>
+      <if test="operateip != null">
+        operateip,
+      </if>
+      <if test="operatetime != null">
+        operatetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roleid != null">
+        #{roleid,jdbcType=INTEGER},
+      </if>
+      <if test="permissionid != null">
+        #{permissionid,jdbcType=INTEGER},
+      </if>
+      <if test="operator != null">
+        #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="operateip != null">
+        #{operateip,jdbcType=VARCHAR},
+      </if>
+      <if test="operatetime != null">
+        #{operatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.ems.Entity.sys_role_permission">
+    update sys_role_permission
+    <set>
+      <if test="operator != null">
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="operateip != null">
+        operateip = #{operateip,jdbcType=VARCHAR},
+      </if>
+      <if test="operatetime != null">
+        operatetime = #{operatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where roleid = #{roleid,jdbcType=INTEGER}
+      and permissionid = #{permissionid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.ems.Entity.sys_role_permission">
+    update sys_role_permission
+    set operator = #{operator,jdbcType=VARCHAR},
+      operateip = #{operateip,jdbcType=VARCHAR},
+      operatetime = #{operatetime,jdbcType=TIMESTAMP}
+    where roleid = #{roleid,jdbcType=INTEGER}
+      and permissionid = #{permissionid,jdbcType=INTEGER}
+  </update>
+</mapper>

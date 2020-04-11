@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <mate name="mainpage" content="width=device-width,initial-scale=1,shrink--to-fit=no"></mate>
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/homepage.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/app.848c623f.css}">
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/css/chunk-4bb1d32a.9e95771d.css}">-->
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/css/chunk-b0d57d44.39ac6dec.css">-->
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/css/chunk-libs.da13e127.css">-->
+    <title>汇丰软件员工管理系统</title>
+
+</head>
+
+<body>
+<div class="main_box">
+    <div class="left_directory">
+        <div class="welcome_column">
+            <a href="/">
+                <h5 style="color: #ffffff;">欢迎登陆</h5>
+            </a>
+        </div>
+        <div class="main_directory">
+            <div class="el-scrollbar">
+                <div class="el-scrollbar-view">
+                    <ul role="menubar" class="menu" style="background-color: rgb(48,65,86)">
+                        <div >
+                            <a href="/" class="">
+                              <li role="menuitem" tabimdex="-1" style="padding-left: 20px; color: rgb(64, 158, 255); background-color: rgb(48, 65, 86);">
+                                  <span>首页</span>
+                              </li>
+                            </a>
+                        </div>
+                        <div >
+                            <li role="menuitem" aria-haspopup="true" class="el-submenu" >
+                                <div style="background-color: rgb(48,65,86) ;color: rgb(191,203,217);padding-left: 20px;"class="el-submenu__title">
+                                    <span>系统管理</span>
+                                    <ul role="menu" class="el-menu" style="background-color: rgb(8,65,86);display: none">
+                                        <div class="nest-menu">
+                                            <a href="/">
+                                              <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                  <span>用户管理</span>
+                                              </li>
+                                            </a>
+                                        </div>
+                                        <div class="nest-menu">
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>部门管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div class="nest-menu">
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>角色管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div class="nest-menu">
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>用户管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div class="nest-menu">
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>用户管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div class="nest-menu">
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>用户管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div>
+                            <li role="menuitem" aria-haspopup="true">
+                                <div style="background-color: rgb(48,65,86) ;color: rgb(191,203,217);padding-left: 20px;">
+                                    <span>系统管理</span>
+                                    <ul role="menu" style="background-color: rgb(8,65,86);display: none">
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>用户管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>部门管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>权限管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>角色管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>信息提交</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>工资明细</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>工作实况</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div >
+                            <li role="menuitem" aria-haspopup="true">
+                                <div style="background-color: rgb(48,65,86) ;color: rgb(191,203,217);padding-left: 20px;">
+                                    <span>系统管理</span>
+                                    <ul role="menu" style="background-color: rgb(8,65,86);display: none">
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>用户管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>部门管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>权限管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>角色管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>信息提交</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>工资明细</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>工作实况</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div >
+                            <li role="menuitem" aria-haspopup="true">
+                                <div style="background-color: rgb(48,65,86) ;color: rgb(191,203,217);padding-left: 20px;">
+                                    <span>系统管理</span>
+                                    <ul role="menu" style="background-color: rgb(8,65,86);display: none">
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>用户管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>部门管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>权限管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>角色管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>信息提交</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>工资明细</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>工作实况</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div>
+                        <li role="menuitem" aria-haspopup="true">
+                            <div style="background-color: rgb(48,65,86) ;color: rgb(191,203,217);padding-left: 20px;">
+                                <span>系统管理</span>
+                                <ul role="menu" style="background-color: rgb(8,65,86);display: none">
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>用户管理</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>部门管理</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>权限管理</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>角色管理</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>信息提交</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>工资明细</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>工作实况</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                        <div>
+                        <li role="menuitem" aria-haspopup="true">
+                            <div style="background-color: rgb(48,65,86) ;color: rgb(191,203,217);padding-left: 20px;">
+                                <span>系统管理</span>
+                                <ul role="menu" style="background-color: rgb(8,65,86);display: none">
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>用户管理</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>部门管理</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>权限管理</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>角色管理</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>信息提交</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>工资明细</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/">
+                                            <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                <span>工作实况</span>
+                                            </li>
+                                        </a>
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                        <div>
+                            <li role="menuitem" aria-haspopup="true">
+                                <div style="background-color: rgb(48,65,86) ;color: rgb(191,203,217);padding-left: 20px;">
+                                    <span>系统管理</span>
+                                    <ul role="menu" style="background-color: rgb(8,65,86);display: none">
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>用户管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>部门管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>权限管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>角色管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>信息提交</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>工资明细</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>工作实况</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+                        <div>
+                            <li role="menuitem" aria-haspopup="true">
+                                <div style="background-color: rgb(48,65,86) ;color: rgb(191,203,217);padding-left: 20px;">
+                                    <span>系统管理</span>
+                                    <ul role="menu" style="background-color: rgb(8,65,86);display: none">
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>用户管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>部门管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>权限管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>角色管理</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>信息提交</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>工资明细</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="/">
+                                                <li role="menuitem" tabindex="-1" style="padding-left: 40px;color: rgb(191,203,217)">
+                                                    <span>工作实况</span>
+                                                </li>
+                                            </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </div>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right_content">
+        <div class="status_bar"></div>
+        <div class="main_content"></div>
+    </div>
+</div>
+</body>
+</html>

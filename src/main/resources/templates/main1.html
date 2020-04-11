@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <mate name="mainpage" content="width=device-width,initial-scale=1"></mate>
+    <title>my</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+    <script type="text/javascript" th:src="@{js/jquery.min.js}"></script>
+</head>
+<body>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">员工管理系统</a>
+    <a class="navbar-brand col-sm-3 col-sm-2 mr-0 fixed-" href="#">你好！</a>
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link" href="#">注销</a>
+        </li>
+
+    </ul>
+</nav>
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" th:class="${activeurl=='personalcenter'?'nav-link active':'nav-link'}"href="/test/main.page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24"viewBox="0 0 24 24"fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="feath feather-home">
+                        <path d="M 3 9 l 9 -7 l 9 7 v 11 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 Z "></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span data-feather="home"></span>
+                    个人中心
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " th:class="${activeurl=='personalcenter'?'nav-link active':'nav-link'}"href="/test/main.page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24"viewBox="0 0 24 24"fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="feath feather-home">
+                        <path d="M 3 9 l 9 -7 l 9 7 v 11 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 Z "></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span data-feather="home"></span>
+                    系统设置
+                </a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            个人设置
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            用户信息维护
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            部门维护
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            权限维护
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            权限分配
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " th:class="${activeurl=='personalcenter'?'nav-link active':'nav-link'}"href="/test/main.page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24"viewBox="0 0 24 24"fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="feath feather-home">
+                        <path d="M 3 9 l 9 -7 l 9 7 v 11 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 Z "></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span data-feather="home"></span>
+                    协同工作
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " th:class="${activeurl=='personalcenter'?'nav-link active':'nav-link'}"href="/test/main.page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24"viewBox="0 0 24 24"fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="feath feather-home">
+                        <path d="M 3 9 l 9 -7 l 9 7 v 11 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 Z "></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span data-feather="home"></span>
+                    人事管理
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " th:class="${activeurl=='personalcenter'?'nav-link active':'nav-link'}"href="/test/main.page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24"viewBox="0 0 24 24"fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="feath feather-home">
+                        <path d="M 3 9 l 9 -7 l 9 7 v 11 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 Z "></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span data-feather="home"></span>
+                    个人中心
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:class="${activeurl=='personalcenter'?'nav-link active':'nav-link'}"href="/test/main.page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24"viewBox="0 0 24 24"fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="feath feather-home">
+                        <path d="M 3 9 l 9 -7 l 9 7 v 11 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 Z "></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span data-feather="home"></span>
+                    个人中心
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " th:class="${activeurl=='personalcenter'?'nav-link active':'nav-link'}"href="/test/main.page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24"viewBox="0 0 24 24"fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="feath feather-home">
+                        <path d="M 3 9 l 9 -7 l 9 7 v 11 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 Z "></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span data-feather="home"></span>
+                    个人中心
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " th:class="${activeurl=='personalcenter'?'nav-link active':'nav-link'}"href="/test/main.page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24"viewBox="0 0 24 24"fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="feath feather-home">
+                        <path d="M 3 9 l 9 -7 l 9 7 v 11 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 Z "></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span data-feather="home"></span>
+                    个人中心
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:class="${activeurl=='personalcenter'?'nav-link active':'nav-link'}"href="/test/main.page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24"viewBox="0 0 24 24"fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="feath feather-home">
+                        <path d="M 3 9 l 9 -7 l 9 7 v 11 a 2 2 0 0 1 -2 2 H 5 a 2 2 0 0 1 -2 -2 Z "></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span data-feather="home"></span>
+                    个人中心
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="row">
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <h2>添加页面</h2>
+    <form th:action="@{/test/save.json}" method="post">
+         <div class="form-group">
+    <lable for="name">姓名：</lable>
+    <input type="text" name="name" id="name" class="form-control" placeholder="请输入姓名！">
+         </div>
+        <div class="form-group">
+            <label for="parentid">父ID：</label>
+            <input type="text" name="parentId" id="parentid" class="form-control"placeholder="请输入所属部门的ID！">
+        </div>
+        <div class="form-group" >
+            <label for="seq">排序：</label>
+            <input type="text" name="seq" id="seq"class="form-control" placeholder="请输入顺序编号！">
+        </div>
+        <div class="form-group">
+            <label for="remark" >备注：</label>
+            <input type="text" name="remark" id="remark"class="form-control"placeholder="请输入备注！">
+        </div>
+        <div class="form-group" >
+            <button class="btn btn-sm btn-primary"type="submit">提交</button>
+            <button class="btn btn-sm btn-danger"type="reset">重置</button>
+            <input type="button" class="btn btn-sm btn-primary" value="返回" onclick="javascript:history.go(-1);">
+        </div>
+    </form>
+</main>
+</div>
+</body>
+</html>

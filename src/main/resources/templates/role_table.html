@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title>Endless Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	  <!-- Bootstrap core CSS -->
+	  <link  rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+
+	  <!-- Font Awesome-->
+	  <link rel="stylesheet"th:href="@{/css/font-awesome.min.css}">
+
+	  <!-- Pace -->
+	  <link  rel="stylesheet"th:href="@{/css/pace.css}">
+
+	  <!-- Datatable -->
+	  <link  rel="stylesheet"th:href="@{/css/jquery.dataTables_themeroller.css}">
+
+	  <!-- Endless -->
+	  <link  rel="stylesheet"th:href="@{/css/endless.min.css}">
+	  <link  rel="stylesheet"th:href="@{/css/endless-skin.css}">
+
+
+
+
+  </head>
+
+  <body class="overflow-hidden">
+	<!-- Overlay Div -->
+	<div id="overlay" class="transparent"></div>
+
+	<a href="" id="theme-setting-icon"><i class="fa fa-cog fa-lg"></i></a>
+	<div th:replace="common/menu::themeseeting"></div>
+	<div id="wrapper" class="preload">
+		<div id="top-nav" class="fixed skin-3">
+			<a href="#" class="brand">
+				<span>Endless</span>
+				<span class="text-toggle"> Admin</span>
+			</a><!-- /brand -->
+			<button type="button" class="navbar-toggle pull-left" id="sidebarToggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<button type="button" class="navbar-toggle pull-left hide-menu" id="menuToggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<ul class="nav-notification clearfix">
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-envelope fa-lg"></i>
+						<span class="notification-label bounceIn animation-delay4">7</span>
+					</a>
+					<ul class="dropdown-menu message dropdown-1">
+						<li><a>You have 4 new unread messages</a></li>
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>[[${session.name}]]</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-check text-success"></i> 27m ago</small>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user2.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>Jane Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-check text-success"></i> 5hr ago</small>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>Bill Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-reply"></i> Yesterday</small>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user2.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>Baby Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-reply"></i> 9 Feb 2013</small>
+								</div>
+							</a>
+						</li>
+						<li><a href="#">View all messages</a></li>
+					</ul>
+				</li>
+				<li class="dropdown hidden-xs">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-tasks fa-lg"></i>
+						<span class="notification-label bounceIn animation-delay5">4</span>
+					</a>
+					<ul class="dropdown-menu task dropdown-2">
+						<li><a href="#">You have 4 tasks to complete</a></li>
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Bug Fixes</span>
+									<small class="pull-right text-muted">78%</small>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" style="width:78%"></div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Software Updating</span>
+									<small class="pull-right text-muted">54%</small>
+								</div>
+								<div class="progress progress-striped">
+									<div class="progress-bar progress-bar-success" style="width:54%"></div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Database Migration</span>
+									<small class="pull-right text-muted">23%</small>
+								</div>
+								<div class="progress">
+									<div class="progress-bar progress-bar-warning" style="width:23%"></div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Unit Testing</span>
+									<small class="pull-right text-muted">92%</small>
+								</div>
+								<div class="progress progress-striped active">
+									<div class="progress-bar progress-bar-danger " style="width:92%"></div>
+								</div>
+							</a>
+						</li>
+						<li><a href="#">View all tasks</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-bell fa-lg"></i>
+						<span class="notification-label bounceIn animation-delay6">5</span>
+					</a>
+					<ul class="dropdown-menu notification dropdown-3">
+						<li><a href="#">You have 5 new notifications</a></li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-warning">
+									<i class="fa fa-warning"></i>
+								</span>
+								<span class="m-left-xs">Server #2 not responding.</span>
+								<span class="time text-muted">Just now</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-plus"></i>
+								</span>
+								<span class="m-left-xs">New user registration.</span>
+								<span class="time text-muted">2m ago</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-danger">
+									<i class="fa fa-bolt"></i>
+								</span>
+								<span class="m-left-xs">Application error.</span>
+								<span class="time text-muted">5m ago</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-usd"></i>
+								</span>
+								<span class="m-left-xs">2 items sold.</span>
+								<span class="time text-muted">1hr ago</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-plus"></i>
+								</span>
+								<span class="m-left-xs">New user registration.</span>
+								<span class="time text-muted">1hr ago</span>
+							</a>
+						</li>
+						<li><a href="#">View all notifications</a></li>
+					</ul>
+				</li>
+				<li class="profile dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<strong>[[${session.name}]]</strong>
+						<span><i class="fa fa-chevron-down"></i></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>[[${session.name}]]</strong>
+									<p class="grey">John_Doe@email.com</p>
+								</div>
+							</a>
+						</li>
+						<li><a tabindex="-1" href="profile.html" class="main-link"><i class="fa fa-edit fa-lg"></i> Edit profile</a></li>
+						<li><a tabindex="-1" href="gallery.html" class="main-link"><i class="fa fa-picture-o fa-lg"></i> Photo Gallery</a></li>
+						<li><a tabindex="-1" href="#" class="theme-setting"><i class="fa fa-cog fa-lg"></i> Setting</a></li>
+						<li class="divider"></li>
+						<li><a tabindex="-1" class="main-link logoutConfirm_open" href="#logoutConfirm"><i class="fa fa-lock fa-lg"></i> Log out</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div><!-- /top-nav-->
+		<aside class="fixed skin-3">
+			<div th:replace="common/menu::sidebaruinner"></div>
+		</aside>
+		<div id="main-container">
+			<div th:replace="common/menu::breadcrumb"></div>
+<!--			<div th:replace="common/menu::pagetitle"></div>-->
+<!--			<div th:replace="common/menu::greycontainer"></div>-->
+			<div class="padding-md">
+
+				<div class="panel panel-default table-responsive">
+					<div class="panel-heading">
+						添加角色
+					</div>
+					<div class="panel panel-default"  style="height: 60px;margin-top: 5px">
+						<form th:action="@{/role/save.page}" method="post">
+							<div class="form-group"style="height: 80%;width: 200px;float: left;margin-left: 30px">
+								<lable>角色</lable>
+								<input type="text" name="name" placeholder="权限名称"class="form-control input-sm bounceIn animation-delay1" >
+							</div>
+							<button class="btn btn-success btn-sm bounceIn animation-delay2 "style="margin-top: 18px;margin-left: 10px" type="submit">提交</button>
+							<button class="btn btn-success btn-sm bounceIn animation-delay2 " style="margin-top: 18px;margin-left: 10px"type="reset">重置</button>
+						</form>
+					</div>
+					<div class="" style="margin-left: 15px">
+						角色信息
+						<span class="label label-info pull-right">共有[[${session.size}]]个用户</span>
+					</div>
+					<div class="padding-md clearfix">
+						<table class="table" id="dataTable">
+							<thead>
+							<tr>
+								<th>No</th>
+								<th>权限</th>
+								<th>operator</th>
+								<th>operator-time</th>
+								<th>operator-ip</th>
+								<th>操作</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr th:each="single:${sysrolelist}">
+								<td th:text="${single.id}"></td>
+								<td th:text="${single.name}"></td>
+								<td th:text="${single.operator}"></td>
+								<td th:text="${single.operatetime}"></td>
+								<td th:text="${single.operateip}"></td>
+								<td>
+									<a href="#"class="label label-success">编辑</a>
+									<button th:value="${single.name}" class="label label-success" data-toggle="modal" id="fengpei" data-target="#rolemodal">分配权限</button>
+									<button  th:attr="Dle_url=@{/role/delete.page/}+${single.id}" type="submit" class="label label-danger">删除</button>
+								</td>
+								<div class="modal fade" id="rolemodal" tabindex="-1" data-toggle="model" aria-labelledby="myModalLable" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+													x
+												</button>
+												<h4 class="modal-title" id="myModalLable">分配权限</h4>
+											</div>
+											<div class="modal-body">
+												<span></span>
+												<div></div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default " data-dismiss="modal" >
+													关闭
+												</button>
+												<button type="button" class="btn btn-default ">
+													提交
+												</button>
+											</div>
+										</div>
+									</div>
+								</div><!--rolemodal-->
+							</tr>
+							</tbody>
+						</table>
+						<form id="deleterole" method="post">
+							<input type="hidden" name="method" value="delete">
+						</form>
+					</div><!-- /.padding-md -->
+				</div><!-- /panel -->
+			</div><!-- /.padding-md -->
+		</div><!-- /main-container -->
+
+	</div><!-- /wrapper -->
+
+	<a href="" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
+
+
+	<!-- Jquery -->
+	<script type="text/javascript" th:src="@{/js/jquery-1.10.2.min.js}"></script>
+
+	<!-- Bootstrap -->
+	<script type="text/javascript"th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+
+	<!-- Datatable -->
+	<script type="text/javascript"th:src="@{/js/jquery.dataTables.min.js}"></script>
+
+	<!-- Modernizr -->
+	<script type="text/javascript"th:src="@{/js/modernizr.min.js}"></script>
+
+	<!-- Pace -->
+	<script type="text/javascript"th:src="@{/js/pace.min.js}"></script>
+
+	<!-- Popup Overlay -->
+	<script type="text/javascript"th:src="@{/js/jquery.popupoverlay.min.js}"></script>
+
+	<!-- Slimscroll -->
+	<script type="text/javascript"th:src="@{/js/jquery.slimscroll.min.js}"></script>
+
+	<!-- Cookie -->
+	<script type="text/javascript"th:src="@{/js/jquery.cookie.min.js}"></script>
+
+	<!-- Endless -->
+	<script type="text/javascript"th:src="@{/js/endless/endless.js}"></script>
+
+
+	<script>
+		$(function	()	{
+			$('#dataTable').dataTable( {
+				"bJQueryUI": true,
+				"sPaginationType": "full_numbers"
+			});
+			
+			$('#chk-all').click(function()	{
+				if($(this).is(':checked'))	{
+					$('#responsiveTable').find('.chk-row').each(function()	{
+						$(this).prop('checked', true);
+						$(this).parent().parent().parent().addClass('selected');
+					});
+				}
+				else	{
+					$('#responsiveTable').find('.chk-row').each(function()	{
+						$(this).prop('checked' , false);
+						$(this).parent().parent().parent().removeClass('selected');
+					});
+				}
+			});
+		});
+		$(".label-danger").click(function () {
+
+			if(confirm("确定要删除吗？"))
+			{
+				$("#deleterole").attr("action", $(this).attr("Dle_url")).submit();
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		});
+		$(function () {
+			$("#fengpei").click(function () {
+				var buttonf = $(this);
+				$("#rolemodal").on('show.bs.modal',function () {
+					var modal =$(this);
+					modal.find(".modal-body span").text(buttonf.val());
+					modal.find(".modal-body div").append("");
+
+				});
+
+			});
+		});
+		$(function () {
+			$("#fengpei").click(function () {
+				$.ajax(
+						
+				)
+			})
+		})
+	</script>
+	
+  </body>
+</html>

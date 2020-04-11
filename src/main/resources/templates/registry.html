@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>注册</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" th:src="@{/js/jquery.js}"></script>
+</head>
+<body >
+<form class="form-horizontal">
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <h2>新用户注册</h2><p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+    <div class="form-group control-label"><label for="inputname" >姓名</label>
+        <input id="inputname" type="text" class="form-control-sm"></div>
+    <div class="form-group control-label"> <lable for="chosegender" >性别</lable>
+        <select name="gender" id="chosegender">
+            <option th:value="1">男</option>
+            <option th:value="2">女</option>
+        </select></div>
+    <div class="form-group control-label"><lable for="inputage" >年龄</lable>
+        <input id="inputage" name="age" type="text"class="form-control-sm"/></div>
+    <div class="form-group control-label"><label for="inputacount">账号</label>
+        <input id="inputacount" type="text" class="form-control-sm"></div>
+    <div class="form-group control-label"><label for="inputpasswor">密码</label>
+        <input id="inputpasswor" type="email" class="form-control-sm"></div>
+    <div class="form-group control-label"><label for="inputmail">邮箱</label>
+        <input id="inputmail" type="text"class="form-control-sm"></div>
+    <div class="form-group control-label"><label for="inputphone">电话</label>
+        <input id="inputphone" type="text" class="form-control-sm"></div>
+    <div class="form-group control-label"><label for="chosedept">部门</label>
+        <select id="chosedept" name="deptid" >
+            <option th:each="dept:${deptlist}" th:text="${dept.name}" th:value="${dept.name}">1</option>
+        </select></div>
+    <div class="form-group control-label"><lable for="choserole">角色</lable>
+        <select name="roleid" id="choserole" >
+            <option th:value="1">管理员</option>
+            <option th:value="2">员工</option>
+        </select></div>
+    <div class="form-group control-label"> <lable for="inputremak" >备注</lable>
+        <input name="ramark" id="inputremak" class="form-control-sm"/></div>
+        <div style="color: black;clear: left">欢迎访问汇丰员工管理系统</div>
+    </main>
+</form>
+</body>
+
+</html>
